@@ -1,11 +1,10 @@
-import AWS from 'aws-sdk';
-AWS.config.update({ region: 'us-west-2' });
+import { SecretsManagerClient, GetSecretValueCommand } from '@aws-sdk/client-secrets-manager';
 
-const secretsManager = new AWS.SecretsManager();
+const client = new SecretsManagerClient({ region: 'us-west-2' });
 
 export async function getSecret(SecretId) {
     try {
-        const data = await secretsManager.getSecretValue({ SecretId }).promise();
+        const data = await client.send(new GetSecretValueCommand({ SecretId }));
 
         if (data.SecretString) {
             return JSON.parse(data.SecretString);
