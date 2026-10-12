@@ -2,11 +2,13 @@ import { Router } from 'express';
 import glob from 'fast-glob';
 import fs from 'fs';
 import path from 'path';
+import { applyWs } from './services/App.js';
 
 const BASE_DIR = path.dirname('..');
 
 export default async function RouteLoader(globPattern) {
     let router = Router();
+    applyWs(router);
     let files = [];
     try {
         files = await glob(globPattern, {cwd: BASE_DIR});
