@@ -1,0 +1,24 @@
+src/RouteLoader.js
+  s_3079605ceac78a::t_7f2e3aa2e56608 5,11
+src/services/App.js
+  s_3079605ceac78a::t_cdaa1ac092a4c2 4-5,13-19
+package.json
+  s_3079605ceac78a::t_bbadbbc4f2793b 15-16,18-20,23,25-26
+  s_3079605ceac78a::t_4cdeda0b34217b 17,21-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9d0ddfd99dcc1cc1a2dae3c7ffb53788de2f29e6",
+  "prompts": {},
+  "sessions": {
+    "s_3079605ceac78a": {
+      "agent_id": {
+        "tool": "kiro",
+        "id": "sess_8d6bcc47-5f5e-409a-8fd2-7c3731fb61ea",
+        "model": "auto"
+      },
+      "human_author": "Chris Tankersley <chris@ctankersley.com>"
+    }
+  }
+}
